@@ -41,7 +41,7 @@ client:
 	timeout 1 dig @localhost -p $(RUN_PORT) deloitte.com +short A
 
 run:
-	eval $(BINARY_PATH) -address :$(RUN_PORT) -default 8.8.8.8:53
+	eval $(REAP) -vx $(BINARY_PATH) -address :$(RUN_PORT) -default 8.8.8.8:53
 
 help:
 	eval $(BINARY_PATH) --help
